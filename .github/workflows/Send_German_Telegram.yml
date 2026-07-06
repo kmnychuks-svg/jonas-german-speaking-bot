@@ -2,37 +2,57 @@ name: Send German Telegram Task
 
 on:
   schedule:
-    # Runs hourly. The Python script sends only at the local hours in TASK_HOURS.
-    # This avoids daylight-saving-time problems for Europe/Berlin.
+    # GitHub cron uses UTC. This workflow runs hourly.
+    # bot.py checks Europe/Berlin local time and sends only at TASK_HOURS.
     - cron: "0 * * * *"
+
   workflow_dispatch:
     inputs:
       run_mode:
-        description: "Which task to send manually"
-        required: false
-        default: "manual"
+        description: "Send morning or evening task now"
+        required: true
+        default: "morning"
         type: choice
         options:
-          - manual
           - morning
           - evening
+
+permissions:
+  contents: read
 
 jobs:
   send-task:
     runs-on: ubuntu-latest
 
     env:
-      env:
-  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-  TIMEZONE: Europe/Berlin
-  FREQUENCY: twice
-  TASK_HOURS: "8,18"
-  RUN_MODE: ${{ github.event.inputs.run_mode || 'auto' }}
-  FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TIMEZONE: Europe/Berlin
+      FREQUENCY: twice
+      TASK_HOURS: "8,18"
+      RUN_MODE: ${{ github.event.inputs.run_mode || 'auto' }}
+      FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Check required secrets
+        shell: bash
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "❌ TELEGRAM_BOT_TOKEN is missing."
+            echo "Add it here: Settings → Secrets and variables → Actions → Repository secrets"
+            exit 1
+          fi
+
+          if [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "❌ TELEGRAM_CHAT_ID is missing."
+            echo "Add it here: Settings → Secrets and variables → Actions → Repository secrets"
+            exit 1
+          fi
+
+          echo "✅ Required secrets are available."
 
       - name: Set up Python
         uses: actions/setup-python@v5
