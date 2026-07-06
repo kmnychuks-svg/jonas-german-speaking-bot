@@ -1,0 +1,54 @@
+name: Send German Telegram Task
+
+on:
+  schedule:
+    # Runs hourly. The Python script sends only at the local hours in TASK_HOURS.
+    # This avoids daylight-saving-time problems for Europe/Berlin.
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      run_mode:
+        description: "Which task to send manually"
+        required: false
+        default: "manual"
+        type: choice
+        options:
+          - manual
+          - morning
+          - evening
+
+jobs:
+  send-task:
+    runs-on: ubuntu-latest
+
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TIMEZONE: Europe/Berlin
+
+      # Recommended for B2 speaking practice:
+      # once  = one task per day, usually morning
+      # twice = morning speaking task + evening correction/reflection task
+      FREQUENCY: twice
+
+      # Local Berlin hours. For once daily, only the first hour is used.
+      TASK_HOURS: "8,18"
+
+      # For scheduled runs, leave auto. For manual runs, force a send.
+      RUN_MODE: ${{ github.event.inputs.run_mode || 'auto' }}
+      FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send Telegram task
+        run: python bot.py
