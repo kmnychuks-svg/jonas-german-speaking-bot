@@ -22,22 +22,14 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      TIMEZONE: Europe/Berlin
-
-      # Recommended for B2 speaking practice:
-      # once  = one task per day, usually morning
-      # twice = morning speaking task + evening correction/reflection task
-      FREQUENCY: twice
-
-      # Local Berlin hours. For once daily, only the first hour is used.
-      TASK_HOURS: "8,18"
-
-      # For scheduled runs, leave auto. For manual runs, force a send.
-      RUN_MODE: ${{ github.event.inputs.run_mode || 'auto' }}
-      FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' }}
-
+      env:
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+  TIMEZONE: Europe/Berlin
+  FREQUENCY: twice
+  TASK_HOURS: "8,18"
+  RUN_MODE: ${{ github.event.inputs.run_mode || 'auto' }}
+  FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
