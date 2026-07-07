@@ -1,88 +1,176 @@
-# Jonas German B2 Telegram Task Bot
+# Hospital German Speaking Coach Bot
 
-This bot sends Jonas German B2 speaking tasks on Telegram using GitHub Actions.
+A Telegram bot for short daily B2 German speaking practice focused on hospital communication.
 
-## Recommendation
+The bot is designed for Jonas because he works in a hospital. It trains useful German for patient communication, ward routines, colleague conversations, shift handovers, and professional speaking.
 
-Use `FREQUENCY: twice`.
+This is a language-learning bot. It does not provide medical instructions or clinical advice.
 
-For B2 speaking, twice daily is better than once daily:
+## Recommended rhythm
 
-- Morning: 3-minute free speaking task
-- Evening: reflection, correction, and improved second attempt
+Use **twice daily**:
 
-Once daily is fine if Jonas often skips tasks, but twice daily gives more repetition and faster speaking improvement.
+- Morning: 5-minute hospital German speaking task
+- Evening: 5–7-minute correction and repetition task
+
+This is better than one long lesson because professional speaking improves through repetition, self-recording, and correction.
+
+## Lesson focus
+
+Each lesson includes:
+
+- hospital situation
+- B2 speaking question
+- answer structure
+- hospital vocabulary
+- professional Redemittel
+- grammar focus
+- pronunciation focus
+- speaking challenge
+- evening self-correction
 
 ## Files
 
-- `bot.py` — creates and sends the German task
-- `.github/workflows/send-german-task.yml` — runs the bot from GitHub Actions
-- `requirements.txt` — Python dependency list
+```text
+bot.py
+lessons.json
+requirements.txt
+.github/workflows/send-hospital-german-speaking-lesson.yml
+.env.example
+README.md
+```
 
-## Setup
+## GitHub setup
 
-### 1. Create a Telegram bot
+### 1. Create Telegram bot
 
-1. Open Telegram.
-2. Search for `@BotFather`.
-3. Send `/newbot`.
-4. Copy the bot token.
+1. Open Telegram
+2. Search for `@BotFather`
+3. Send `/newbot`
+4. Choose a bot name
+5. Choose a username ending in `bot`
+6. Copy the token
 
 ### 2. Get your Telegram chat ID
 
-The easiest method:
-
-1. Send any message to your new bot.
-2. Open this URL in your browser, replacing `<BOT_TOKEN>`:
-
-```text
-https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
-```
-
-3. Find `"chat":{"id":...}`.
-4. Copy that number.
-
-### 3. Add GitHub repository secrets
-
-In your GitHub repository:
-
-`Settings` → `Secrets and variables` → `Actions` → `New repository secret`
-
-Add:
+1. Send `/start` to your new bot
+2. Send any message to the bot, for example `hello`
+3. Open this URL in your browser:
 
 ```text
-TELEGRAM_BOT_TOKEN = your Telegram bot token
-TELEGRAM_CHAT_ID = your chat ID
+https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
 ```
 
-### 4. Choose once or twice daily
+4. Find:
 
-Open:
+```json
+"chat":{"id":123456789}
+```
+
+5. Copy the number.
+
+For groups, the chat ID is often negative.
+
+### 3. Add GitHub secrets
+
+In your GitHub repo, go to:
 
 ```text
-.github/workflows/send-german-task.yml
+Settings → Secrets and variables → Actions → Repository secrets
 ```
 
-For twice daily, keep:
+Create exactly these two secrets:
+
+```text
+TELEGRAM_BOT_TOKEN
+TELEGRAM_CHAT_ID
+```
+
+Important:
+
+- Use **Secrets**, not Variables
+- Names must match exactly
+- Do not add quotes around the values
+
+## Schedule
+
+Default:
 
 ```yaml
 FREQUENCY: twice
 TASK_HOURS: "8,18"
 ```
 
-For once daily, change it to:
+That means:
+
+```text
+08:00 → morning hospital German speaking lesson
+18:00 → evening correction task
+```
+
+For once daily:
 
 ```yaml
 FREQUENCY: once
 TASK_HOURS: "8"
 ```
 
-The times are local Europe/Berlin time.
+The workflow runs hourly because GitHub cron uses UTC. The Python script checks Europe/Berlin time and sends only at the correct local hours.
 
 ## Manual test
 
-Go to:
+In GitHub:
 
-`Actions` → `Send German Telegram Task` → `Run workflow`
+```text
+Actions → Send Hospital German Speaking Lesson → Run workflow
+```
 
-This sends a test task immediately.
+Choose:
+
+```text
+test
+```
+
+Then test:
+
+```text
+morning
+```
+
+or:
+
+```text
+evening
+```
+
+## Customize lessons
+
+Edit:
+
+```text
+lessons.json
+```
+
+Each lesson has this format:
+
+```json
+{
+  "title": "...",
+  "theme": "...",
+  "scenario": "...",
+  "question": "...",
+  "goal": "...",
+  "vocabulary": ["...", "..."],
+  "structure": ["...", "..."],
+  "phrases": ["...", "..."],
+  "grammar": "...",
+  "pronunciation": "...",
+  "challenge": "..."
+}
+```
+
+## Suggested repo name
+
+```text
+hospital-german-speaking-coach-bot
+```

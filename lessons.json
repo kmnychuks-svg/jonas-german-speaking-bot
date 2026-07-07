@@ -1,0 +1,439 @@
+[
+  {
+    "title": "Patienten begrüßen und beruhigen",
+    "theme": "Aufnahme auf der Station",
+    "scenario": "Ein neuer Patient kommt auf die Station und wirkt unsicher.",
+    "question": "Wie begrüßt du den Patienten freundlich und erklärst ihm die nächsten Schritte?",
+    "goal": "Sprich ruhig, höflich und klar. Erkläre den Ablauf in einfacher Sprache.",
+    "vocabulary": [
+      "die Aufnahme",
+      "die Station",
+      "die Untersuchung",
+      "die Unterlagen",
+      "sich anmelden",
+      "ruhig bleiben"
+    ],
+    "structure": [
+      "Begrüßung",
+      "Kurz vorstellen",
+      "Ablauf erklären",
+      "Frage anbieten"
+    ],
+    "phrases": [
+      "Guten Tag, mein Name ist ...",
+      "Ich erkläre Ihnen kurz, wie es weitergeht.",
+      "Haben Sie im Moment Schmerzen oder Fragen?"
+    ],
+    "grammar": "Höfliche Fragen mit Sie: Haben Sie ...? Können Sie ...? Möchten Sie ...?",
+    "pronunciation": "Sprich höfliche Fragen mit ruhiger, freundlicher Satzmelodie.",
+    "challenge": "Nimm eine 90-Sekunden-Sprachnachricht auf: Begrüße den Patienten und erkläre die Aufnahme."
+  },
+  {
+    "title": "Schmerzen erfragen",
+    "theme": "Schmerzskala und Beschwerden",
+    "scenario": "Ein Patient sagt, dass er Schmerzen hat.",
+    "question": "Wie fragst du gezielt nach Schmerzort, Stärke, Dauer und Art der Schmerzen?",
+    "goal": "Stelle klare W-Fragen und fasse die Antwort kurz zusammen.",
+    "vocabulary": [
+      "die Schmerzen",
+      "die Schmerzskala",
+      "stechend",
+      "dumpf",
+      "ausstrahlen",
+      "seit wann"
+    ],
+    "structure": [
+      "Schmerzort",
+      "Schmerzstärke",
+      "Dauer",
+      "Art",
+      "Zusammenfassung"
+    ],
+    "phrases": [
+      "Wo genau haben Sie Schmerzen?",
+      "Auf einer Skala von 0 bis 10: Wie stark sind die Schmerzen?",
+      "Ich fasse kurz zusammen: Sie haben seit ... Schmerzen."
+    ],
+    "grammar": "W-Fragen und indirekte Zusammenfassung: Sie sagen, dass ...",
+    "pronunciation": "Übe die Wörter: Schmerz, stechend, ausstrahlen, Skala.",
+    "challenge": "Führe ein 2-minütiges Rollenspiel: Du bist Pflegekraft, der Patient beschreibt Schmerzen."
+  },
+  {
+    "title": "Vitalzeichen erklären",
+    "theme": "Blutdruck, Puls und Temperatur",
+    "scenario": "Du misst die Vitalzeichen und erklärst dem Patienten, was du machst.",
+    "question": "Wie erklärst du die Messung von Blutdruck, Puls und Temperatur kurz und verständlich?",
+    "goal": "Erkläre eine Routinehandlung sicher und patientenfreundlich.",
+    "vocabulary": [
+      "der Blutdruck",
+      "der Puls",
+      "die Temperatur",
+      "messen",
+      "die Manschette",
+      "kurz stillhalten"
+    ],
+    "structure": [
+      "Ankündigen",
+      "Handlung erklären",
+      "Patienten bitten mitzumachen",
+      "Ergebnis neutral nennen"
+    ],
+    "phrases": [
+      "Ich messe jetzt kurz Ihren Blutdruck.",
+      "Bitte halten Sie den Arm einen Moment ruhig.",
+      "Ich notiere die Werte und gebe sie weiter."
+    ],
+    "grammar": "Trennbare Verben: aufschreiben, weitergeben, stillhalten",
+    "pronunciation": "Achte auf zusammengesetzte Wörter: Blut-druck, Körper-temperatur.",
+    "challenge": "Sprich 90 Sekunden, als würdest du einem Patienten die Messung erklären."
+  },
+  {
+    "title": "Medikamente ankündigen",
+    "theme": "Medikamentengabe",
+    "scenario": "Du bringst dem Patienten seine Medikamente.",
+    "question": "Wie erklärst du, welche Medikamente der Patient bekommt und worauf er achten soll?",
+    "goal": "Sprich klar, aber vorsichtig. Keine falschen Versprechen machen.",
+    "vocabulary": [
+      "das Medikament",
+      "die Tablette",
+      "die Dosis",
+      "einnehmen",
+      "verträglich",
+      "Nebenwirkungen"
+    ],
+    "structure": [
+      "Ankündigung",
+      "Name/Art des Medikaments",
+      "Einnahme erklären",
+      "Rückfrage ermöglichen"
+    ],
+    "phrases": [
+      "Ich bringe Ihnen jetzt Ihre Medikamente.",
+      "Bitte nehmen Sie die Tablette mit etwas Wasser ein.",
+      "Falls Sie etwas Ungewöhnliches bemerken, sagen Sie bitte Bescheid."
+    ],
+    "grammar": "Imperativ höflich mit bitte: Nehmen Sie bitte ..., Sagen Sie bitte ...",
+    "pronunciation": "Übe: Medikament, Nebenwirkung, einnehmen, Bescheid.",
+    "challenge": "Erkläre die Medikamentengabe in 90 Sekunden. Bleibe sprachlich sicher und neutral."
+  },
+  {
+    "title": "Patienten mobilisieren",
+    "theme": "Aufstehen und Bewegung",
+    "scenario": "Ein Patient soll zum ersten Mal nach einer Behandlung aufstehen.",
+    "question": "Wie leitest du den Patienten sicher und freundlich beim Aufstehen an?",
+    "goal": "Gib klare Schritt-für-Schritt-Anweisungen.",
+    "vocabulary": [
+      "aufstehen",
+      "sich festhalten",
+      "langsam",
+      "Schwindel",
+      "Gehhilfe",
+      "Sturzgefahr"
+    ],
+    "structure": [
+      "Vorbereiten",
+      "Sicherheit erklären",
+      "Schrittweise anleiten",
+      "Nach Beschwerden fragen"
+    ],
+    "phrases": [
+      "Bitte stehen Sie langsam auf.",
+      "Halten Sie sich bitte hier fest.",
+      "Ist Ihnen schwindelig?"
+    ],
+    "grammar": "Modalverben: Sie können ..., Sie sollten ..., Sie dürfen nicht ...",
+    "pronunciation": "Sprich Anweisungen langsam und deutlich, besonders bei Sicherheitshinweisen.",
+    "challenge": "Mache ein 2-minütiges Rollenspiel: Du hilfst einem Patienten beim Aufstehen."
+  },
+  {
+    "title": "Schichtübergabe strukturieren",
+    "theme": "Übergabe an Kolleginnen und Kollegen",
+    "scenario": "Du gibst am Ende der Schicht wichtige Informationen weiter.",
+    "question": "Wie gibst du eine kurze, klare Schichtübergabe?",
+    "goal": "Berichte strukturiert und ohne unnötige Details.",
+    "vocabulary": [
+      "die Übergabe",
+      "die Schicht",
+      "stabil",
+      "auffällig",
+      "beobachten",
+      "weiterleiten"
+    ],
+    "structure": [
+      "Patientenzustand",
+      "Wichtige Ereignisse",
+      "Aktuelle Werte",
+      "Nächste Schritte"
+    ],
+    "phrases": [
+      "Der Patient ist aktuell stabil.",
+      "Auffällig war heute, dass ...",
+      "Bitte weiterhin auf ... achten."
+    ],
+    "grammar": "Perfekt für Ereignisse: Der Patient hat ..., Die Werte sind ...",
+    "pronunciation": "Übe klare Betonung bei Zahlen, Zeiten und wichtigen Informationen.",
+    "challenge": "Sprich eine 2-minütige Übergabe über einen fiktiven Patienten."
+  },
+  {
+    "title": "Mit Angehörigen sprechen",
+    "theme": "Kurzes Gespräch mit Familie",
+    "scenario": "Ein Angehöriger fragt besorgt nach dem Zustand des Patienten.",
+    "question": "Wie reagierst du freundlich, professionell und mit klaren Grenzen?",
+    "goal": "Zeige Empathie und bleibe bei Informationen, die du sicher geben darfst.",
+    "vocabulary": [
+      "die Angehörigen",
+      "der Zustand",
+      "besorgt",
+      "Verständnis haben",
+      "weitergeben",
+      "zuständig"
+    ],
+    "structure": [
+      "Sorge anerkennen",
+      "Kurz erklären",
+      "Grenze nennen",
+      "Weiterleitung anbieten"
+    ],
+    "phrases": [
+      "Ich verstehe, dass Sie sich Sorgen machen.",
+      "Ich gebe Ihre Frage gern an die zuständige Person weiter.",
+      "Dazu kann Ihnen die Ärztin/der Arzt genauer Auskunft geben."
+    ],
+    "grammar": "Dass-Sätze: Ich verstehe, dass ... / Ich gebe weiter, dass ...",
+    "pronunciation": "Achte auf ruhige Stimme bei emotionalen Gesprächen.",
+    "challenge": "Sprich 2 Minuten: Ein Angehöriger ist besorgt, du reagierst empathisch."
+  },
+  {
+    "title": "Beschwerden professionell aufnehmen",
+    "theme": "Unzufriedener Patient",
+    "scenario": "Ein Patient ist unzufrieden, weil er lange warten musste.",
+    "question": "Wie reagierst du professionell auf eine Beschwerde?",
+    "goal": "Deeskaliere, zeige Verständnis und erkläre die Situation kurz.",
+    "vocabulary": [
+      "die Beschwerde",
+      "die Wartezeit",
+      "Verständnis",
+      "sich entschuldigen",
+      "klären",
+      "dringend"
+    ],
+    "structure": [
+      "Zuhören",
+      "Verständnis zeigen",
+      "Kurz erklären",
+      "Lösung anbieten"
+    ],
+    "phrases": [
+      "Ich verstehe, dass die Wartezeit ärgerlich ist.",
+      "Es tut mir leid, dass Sie warten mussten.",
+      "Ich kläre kurz, wie lange es noch dauert."
+    ],
+    "grammar": "Konjunktiv II höflich: Ich würde ..., Könnten Sie bitte ...?",
+    "pronunciation": "Sprich langsam, besonders wenn die andere Person aufgeregt ist.",
+    "challenge": "Führe ein 2-minütiges Deeskalationsgespräch."
+  },
+  {
+    "title": "Hygiene erklären",
+    "theme": "Händedesinfektion und Schutzmaßnahmen",
+    "scenario": "Du erklärst einem Besucher die Hygieneregeln.",
+    "question": "Wie erklärst du höflich, warum Desinfektion und Schutzmaßnahmen wichtig sind?",
+    "goal": "Erkläre Regeln klar, ohne unfreundlich zu klingen.",
+    "vocabulary": [
+      "die Hygiene",
+      "die Desinfektion",
+      "der Schutz",
+      "die Maske",
+      "die Regel",
+      "vermeiden"
+    ],
+    "structure": [
+      "Regel nennen",
+      "Grund erklären",
+      "Bitte formulieren",
+      "Dank aussprechen"
+    ],
+    "phrases": [
+      "Bitte desinfizieren Sie sich zuerst die Hände.",
+      "Das dient dem Schutz der Patientinnen und Patienten.",
+      "Vielen Dank für Ihr Verständnis."
+    ],
+    "grammar": "Finalsätze mit damit: ..., damit wir Infektionen vermeiden.",
+    "pronunciation": "Übe lange Wörter in Teilen: Hände-desinfektion, Schutz-maßnahmen.",
+    "challenge": "Erkläre die Hygieneregeln in 60–90 Sekunden."
+  },
+  {
+    "title": "Untersuchung vorbereiten",
+    "theme": "Vorbereitung auf Blutabnahme oder Untersuchung",
+    "scenario": "Ein Patient soll für eine Untersuchung vorbereitet werden.",
+    "question": "Wie erklärst du dem Patienten, was gleich passiert?",
+    "goal": "Gib klare Informationen und reduziere Unsicherheit.",
+    "vocabulary": [
+      "die Untersuchung",
+      "die Blutabnahme",
+      "nüchtern",
+      "vorbereiten",
+      "kurz dauern",
+      "unangenehm"
+    ],
+    "structure": [
+      "Was passiert?",
+      "Wie lange dauert es?",
+      "Was muss der Patient tun?",
+      "Beruhigender Abschluss"
+    ],
+    "phrases": [
+      "Die Untersuchung dauert voraussichtlich nur kurz.",
+      "Bitte bleiben Sie möglichst ruhig sitzen.",
+      "Es kann kurz unangenehm sein, ist aber schnell vorbei."
+    ],
+    "grammar": "Passiv: Es wird Blut abgenommen. Die Werte werden kontrolliert.",
+    "pronunciation": "Sprich Passiv-Sätze flüssig: Es wird ..., Die Werte werden ...",
+    "challenge": "Erkläre eine Blutabnahme in einfacher, beruhigender Sprache."
+  },
+  {
+    "title": "Entlassung erklären",
+    "theme": "Patient geht nach Hause",
+    "scenario": "Ein Patient wird entlassen und braucht klare Informationen.",
+    "question": "Wie erklärst du die nächsten Schritte nach der Entlassung?",
+    "goal": "Gib strukturierte Hinweise in einfacher Sprache.",
+    "vocabulary": [
+      "die Entlassung",
+      "der Arztbrief",
+      "der Termin",
+      "die Kontrolle",
+      "sich melden",
+      "weiterbehandeln"
+    ],
+    "structure": [
+      "Entlassung bestätigen",
+      "Unterlagen erklären",
+      "Kontrolltermin nennen",
+      "Warnzeichen erwähnen"
+    ],
+    "phrases": [
+      "Hier ist Ihr Arztbrief.",
+      "Bitte vereinbaren Sie einen Kontrolltermin.",
+      "Wenn sich Ihre Beschwerden verschlimmern, melden Sie sich bitte sofort."
+    ],
+    "grammar": "Wenn-Sätze: Wenn ..., dann ... / Wenn ..., melden Sie sich ...",
+    "pronunciation": "Achte auf klare Betonung bei Zeitangaben und Bedingungen.",
+    "challenge": "Sprich eine 2-minütige Entlassungserklärung."
+  },
+  {
+    "title": "Notfallsituation sprachlich ruhig begleiten",
+    "theme": "Ruhige Kommunikation unter Druck",
+    "scenario": "Es gibt eine dringende Situation auf der Station.",
+    "question": "Wie sprichst du kurz, ruhig und klar, wenn es schnell gehen muss?",
+    "goal": "Nutze kurze Sätze, klare Anweisungen und professionelle Sprache.",
+    "vocabulary": [
+      "dringend",
+      "sofort",
+      "Hilfe holen",
+      "stabil",
+      "reagieren",
+      "alarmieren"
+    ],
+    "structure": [
+      "Situation nennen",
+      "Hilfe holen",
+      "Kurze Anweisung",
+      "Rückmeldung geben"
+    ],
+    "phrases": [
+      "Ich brauche bitte Unterstützung in Zimmer ...",
+      "Der Patient reagiert aktuell nicht wie gewohnt.",
+      "Ich bleibe beim Patienten und informiere sofort das Team."
+    ],
+    "grammar": "Kurze Hauptsätze und klare Verben",
+    "pronunciation": "Sprich nicht schnell. Sprich kurz und deutlich.",
+    "challenge": "Trainiere 60 Sekunden Notfallkommunikation mit kurzen Sätzen."
+  },
+  {
+    "title": "Kollegiale Rückfrage",
+    "theme": "Nachfragen im Team",
+    "scenario": "Du bist unsicher und musst eine Kollegin oder einen Arzt etwas fragen.",
+    "question": "Wie formulierst du eine professionelle Rückfrage?",
+    "goal": "Frage klar nach, ohne unsicher oder unvorbereitet zu wirken.",
+    "vocabulary": [
+      "die Rückfrage",
+      "unsicher",
+      "bestätigen",
+      "abklären",
+      "zuständig",
+      "Rückmeldung"
+    ],
+    "structure": [
+      "Kontext geben",
+      "Problem nennen",
+      "Konkrete Frage stellen",
+      "Nächsten Schritt vorschlagen"
+    ],
+    "phrases": [
+      "Ich habe eine kurze Rückfrage zu ...",
+      "Könnten Sie bitte bestätigen, ob ...?",
+      "Soll ich als Nächstes ...?"
+    ],
+    "grammar": "Indirekte Fragen: ob, wann, wie, warum",
+    "pronunciation": "Betone die konkrete Frage am Satzende klar.",
+    "challenge": "Formuliere 5 professionelle Rückfragen aus dem Klinikalltag."
+  },
+  {
+    "title": "Pflegebericht mündlich zusammenfassen",
+    "theme": "Beobachtungen berichten",
+    "scenario": "Du berichtest kurz, was du während der Schicht beobachtet hast.",
+    "question": "Wie fasst du Beobachtungen sachlich und präzise zusammen?",
+    "goal": "Unterscheide Beobachtung, Vermutung und nächste Maßnahme.",
+    "vocabulary": [
+      "beobachten",
+      "auffällig",
+      "unverändert",
+      "verbessert",
+      "verschlechtert",
+      "dokumentieren"
+    ],
+    "structure": [
+      "Beobachtung",
+      "Veränderung",
+      "Maßnahme",
+      "Dokumentation"
+    ],
+    "phrases": [
+      "Mir ist aufgefallen, dass ...",
+      "Im Vergleich zu heute Morgen ...",
+      "Ich habe es dokumentiert und weitergegeben."
+    ],
+    "grammar": "Vergleiche: besser als, schlechter als, unverändert im Vergleich zu",
+    "pronunciation": "Sprich Beobachtungen sachlich, nicht dramatisch.",
+    "challenge": "Sprich 2 Minuten über einen fiktiven Verlauf während einer Schicht."
+  },
+  {
+    "title": "Wochen-Checkpoint Krankenhausdeutsch",
+    "theme": "B2-Simulation: Stationstag",
+    "scenario": "Du kombinierst mehrere Situationen: Patient, Angehörige, Teamübergabe.",
+    "question": "Wie würdest du einen typischen Arbeitstag im Krankenhaus sprachlich zusammenfassen?",
+    "goal": "Trainiere flüssiges, strukturiertes Krankenhausdeutsch auf B2-Niveau.",
+    "vocabulary": [
+      "die Station",
+      "der Patient",
+      "die Übergabe",
+      "die Untersuchung",
+      "die Entlassung",
+      "die Rückfrage"
+    ],
+    "structure": [
+      "Tagesbeginn",
+      "Patientensituation",
+      "Kommunikation im Team",
+      "Herausforderung",
+      "Fazit"
+    ],
+    "phrases": [
+      "Zu Beginn der Schicht ...",
+      "Eine Herausforderung war, dass ...",
+      "Am Ende habe ich gelernt, dass ..."
+    ],
+    "grammar": "Wiederhole 3 Grammatikpunkte der Woche.",
+    "pronunciation": "Achte auf Pausen, Satzmelodie und klare Struktur.",
+    "challenge": "Halte eine 4-minütige Mini-Präsentation über einen fiktiven Stationstag."
+  }
+]
