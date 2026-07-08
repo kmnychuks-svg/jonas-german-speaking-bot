@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Patienten begrüßen und beruhigen",
+    "theme": "Aufnahme auf der Station",
+    "scenario": "Ein neuer Patient kommt auf die Station und wirkt unsicher.",
+    "question": "Wie begrüßt du den Patienten freundlich und erklärst ihm die nächsten Schritte?",
+    "goal": "Sprich ruhig, höflich und klar. Erkläre den Ablauf in einfacher Sprache.",
+    "vocabulary": ["die Aufnahme", "die Station", "die Untersuchung", "die Unterlagen", "sich anmelden", "ruhig bleiben"],
+    "structure": ["Begrüßung", "Kurz vorstellen", "Ablauf erklären", "Frage anbieten"],
+    "phrases": ["Guten Tag, mein Name ist ...", "Ich erkläre Ihnen kurz, wie es weitergeht.", "Haben Sie im Moment Schmerzen oder Fragen?"],
+    "grammar": "Höfliche Fragen mit Sie: Haben Sie ...? Können Sie ...? Möchten Sie ...?",
+    "pronunciation": "Sprich höfliche Fragen mit ruhiger, freundlicher Satzmelodie.",
+    "challenge": "Nimm eine 90-Sekunden-Sprachnachricht auf: Begrüße den Patienten und erkläre die Aufnahme."
+  },
+  {
+    "title": "Schmerzen erfragen",
+    "theme": "Schmerzskala und Beschwerden",
+    "scenario": "Ein Patient sagt, dass er Schmerzen hat.",
+    "question": "Wie fragst du gezielt nach Schmerzort, Stärke, Dauer und Art der Schmerzen?",
+    "goal": "Stelle klare W-Fragen und fasse die Antwort kurz zusammen.",
+    "vocabulary": ["die Schmerzen", "die Schmerzskala", "stechend", "dumpf", "ausstrahlen", "seit wann"],
+    "structure": ["Schmerzort", "Schmerzstärke", "Dauer", "Art", "Zusammenfassung"],
+    "phrases": ["Wo genau haben Sie Schmerzen?", "Auf einer Skala von 0 bis 10: Wie stark sind die Schmerzen?", "Ich fasse kurz zusammen: Sie haben seit ... Schmerzen."],
+    "grammar": "W-Fragen und indirekte Zusammenfassung: Sie sagen, dass ...",
+    "pronunciation": "Übe die Wörter: Schmerz, stechend, ausstrahlen, Skala.",
+    "challenge": "Führe ein 2-minütiges Rollenspiel: Du bist Pflegekraft, der Patient beschreibt Schmerzen."
+  },
+  {
+    "title": "Schichtübergabe strukturieren",
+    "theme": "Übergabe an Kolleginnen und Kollegen",
+    "scenario": "Du gibst am Ende der Schicht wichtige Informationen weiter.",
+    "question": "Wie gibst du eine kurze, klare Schichtübergabe?",
+    "goal": "Berichte strukturiert und ohne unnötige Details.",
+    "vocabulary": ["die Übergabe", "die Schicht", "stabil", "auffällig", "beobachten", "weiterleiten"],
+    "structure": ["Patientenzustand", "Wichtige Ereignisse", "Aktuelle Werte", "Nächste Schritte"],
+    "phrases": ["Der Patient ist aktuell stabil.", "Auffällig war heute, dass ...", "Bitte weiterhin auf ... achten."],
+    "grammar": "Perfekt für Ereignisse: Der Patient hat ..., Die Werte sind ...",
+    "pronunciation": "Übe klare Betonung bei Zahlen, Zeiten und wichtigen Informationen.",
+    "challenge": "Sprich eine 2-minütige Übergabe über einen fiktiven Patienten."
+  },
+  {
+    "title": "Mit Angehörigen sprechen",
+    "theme": "Kurzes Gespräch mit Familie",
+    "scenario": "Ein Angehöriger fragt besorgt nach dem Zustand des Patienten.",
+    "question": "Wie reagierst du freundlich, professionell und mit klaren Grenzen?",
+    "goal": "Zeige Empathie und bleibe bei Informationen, die du sicher geben darfst.",
+    "vocabulary": ["die Angehörigen", "der Zustand", "besorgt", "Verständnis haben", "weitergeben", "zuständig"],
+    "structure": ["Sorge anerkennen", "Kurz erklären", "Grenze nennen", "Weiterleitung anbieten"],
+    "phrases": ["Ich verstehe, dass Sie sich Sorgen machen.", "Ich gebe Ihre Frage gern an die zuständige Person weiter.", "Dazu kann Ihnen die Ärztin/der Arzt genauer Auskunft geben."],
+    "grammar": "Dass-Sätze: Ich verstehe, dass ... / Ich gebe weiter, dass ...",
+    "pronunciation": "Achte auf ruhige Stimme bei emotionalen Gesprächen.",
+    "challenge": "Sprich 2 Minuten: Ein Angehöriger ist besorgt, du reagierst empathisch."
+  },
+  {
+    "title": "Entlassung erklären",
+    "theme": "Patient geht nach Hause",
+    "scenario": "Ein Patient wird entlassen und braucht klare Informationen.",
+    "question": "Wie erklärst du die nächsten Schritte nach der Entlassung?",
+    "goal": "Gib strukturierte Hinweise in einfacher Sprache.",
+    "vocabulary": ["die Entlassung", "der Arztbrief", "der Termin", "die Kontrolle", "sich melden", "weiterbehandeln"],
+    "structure": ["Entlassung bestätigen", "Unterlagen erklären", "Kontrolltermin nennen", "Warnzeichen erwähnen"],
+    "phrases": ["Hier ist Ihr Arztbrief.", "Bitte vereinbaren Sie einen Kontrolltermin.", "Wenn sich Ihre Beschwerden verschlimmern, melden Sie sich bitte sofort."],
+    "grammar": "Wenn-Sätze: Wenn ..., melden Sie sich ...",
+    "pronunciation": "Achte auf klare Betonung bei Zeitangaben und Bedingungen.",
+    "challenge": "Sprich eine 2-minütige Entlassungserklärung."
+  }
+]
