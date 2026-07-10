@@ -1,0 +1,43 @@
+name: Send Hospital German Speaking Lesson
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  send-lesson:
+    runs-on: ubuntu-latest
+
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      STUDENT_NAME: Jonas
+      TIMEZONE: Europe/Berlin
+      FREQUENCY: twice
+      TASK_HOURS: "8,18"
+      RUN_TYPE: test
+      FORCE_SEND: "true"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show bot.py first lines
+        run: |
+          echo "Files in repo root:"
+          ls -la
+          echo "First 5 lines of bot.py:"
+          head -n 5 bot.py
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send Telegram test message
+        run: python bot.py
