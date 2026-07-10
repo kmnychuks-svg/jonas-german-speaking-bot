@@ -1,0 +1,154 @@
+name: Hospital German Inline Bot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  send-lesson:
+    runs-on: ubuntu-latest
+
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TIMEZONE: Europe/Berlin
+      FREQUENCY: twice
+      TASK_HOURS: "8,18"
+
+    steps:
+      - name: Check secrets
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "TELEGRAM_BOT_TOKEN is missing"
+            exit 1
+          fi
+
+          if [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "TELEGRAM_CHAT_ID is missing"
+            exit 1
+          fi
+
+          echo "Secrets exist"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Send hospital German lesson
+        run: |
+          python - <<'PY'
+          import os
+          import datetime as dt
+          from zoneinfo import ZoneInfo
+          import requests
+
+          BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+          CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+          TIMEZONE = os.getenv("TIMEZONE", "Europe/Berlin")
+          FREQUENCY = os.getenv("FREQUENCY", "twice")
+          TASK_HOURS = os.getenv("TASK_HOURS", "8,18")
+
+          now = dt.datetime.now(ZoneInfo(TIMEZONE))
+          hours = [int(x.strip()) for x in TASK_HOURS.split(",") if x.strip()]
+
+          if FREQUENCY == "once":
+              hours = [hours[0]]
+          else:
+              hours = hours[:2]
+
+          manual_run = os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch"
+
+          if not manual_run and now.hour not in hours:
+              print(f"Not due now. Local time: {now.isoformat()}")
+              raise SystemExit(0)
+
+          if manual_run:
+              lesson_type = "test"
+          elif FREQUENCY == "twice" and len(hours) > 1 and now.hour == hours[1]:
+              lesson_type = "evening"
+          else:
+              lesson_type = "morning"
+
+          if lesson_type == "evening":
+              message = """🌙🏥 Jonas' Krankenhausdeutsch-Korrektur
+          ⏱️ Dauer: 5–7 Minuten
+
+          Aufgabe:
+          Höre deine heutige Sprachnachricht noch einmal an.
+
+          Verbessere 3 Sätze:
+          • 1 Satz mit besserer Wortstellung
+          • 1 Satz mit genauerer Grammatik
+          • 1 Satz mit professionellerem Krankenhausdeutsch
+
+          Danach:
+          Sprich die Situation noch einmal, aber kürzer und besser: 90 Sekunden.
+
+          Pflicht-Redemittel:
+          • Ich verstehe, dass Sie sich Sorgen machen.
+          • Ich erkläre Ihnen kurz, wie es weitergeht.
+          • Bitte sagen Sie Bescheid, wenn Sie Schmerzen haben.
+
+          Lehrer-Tipp:
+          Im Krankenhaus muss Deutsch ruhig, höflich, kurz und eindeutig sein."""
+          else:
+              message = """🏥🇩🇪 Jonas' Krankenhausdeutsch B2
+          ⏱️ Dauer: 5 Minuten
+
+          Situation:
+          Ein neuer Patient kommt auf die Station und wirkt unsicher.
+
+          Sprechfrage:
+          Wie begrüßt du den Patienten freundlich und erklärst ihm die nächsten Schritte?
+
+          Struktur:
+          • Begrüßung
+          • Kurz vorstellen
+          • Ablauf erklären
+          • Nach Schmerzen oder Fragen fragen
+
+          Wortschatz:
+          • die Aufnahme
+          • die Station
+          • die Untersuchung
+          • die Unterlagen
+          • sich anmelden
+          • ruhig bleiben
+
+          Redemittel:
+          • Guten Tag, mein Name ist ...
+          • Ich erkläre Ihnen kurz, wie es weitergeht.
+          • Haben Sie im Moment Schmerzen oder Fragen?
+
+          Aufgabe:
+          Nimm eine Telegram-Sprachnachricht auf. Sprich 90 Sekunden ruhig und professionell."""
+
+          url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+
+          response = requests.post(
+              url,
+              json={
+                  "chat_id": CHAT_ID,
+                  "text": message,
+                  "disable_web_page_preview": True,
+              },
+              timeout=20,
+          )
+
+          if response.status_code == 401:
+              raise RuntimeError("Telegram rejected TELEGRAM_BOT_TOKEN")
+
+          if response.status_code == 400:
+              raise RuntimeError("Telegram rejected TELEGRAM_CHAT_ID. Send /start to the bot and check getUpdates.")
+
+          response.raise_for_status()
+          print("Message sent successfully")
+          PY
