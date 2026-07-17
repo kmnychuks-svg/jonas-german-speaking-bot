@@ -55,25 +55,50 @@ def parse_hours() -> list[int]:
     if not hours:
         raise RuntimeError("TASK_HOURS must not be empty.")
 
-    for hour in hours:
-        if hour < 0 or hour > 23:
-            raise RuntimeError("TASK_HOURS must contain hours between 0 and 23.")
+    if any(hour < 0 or hour > 23 for hour in hours):
+        raise RuntimeError("TASK_HOURS must contain hours between 0 and 23.")
 
     if FREQUENCY == "once":
         return [hours[0]]
 
     if FREQUENCY == "twice":
-        if len(hours) == 1:
-            return [hours[0], 18]
-        return hours[:2]
+        return [hours[0], hours[1] if len(hours) > 1 else 18]
 
     raise RuntimeError("FREQUENCY must be 'once' or 'twice'.")
 
 
+def is_last_wednesday(day: dt.date) -> bool:
+    return day.weekday() == 2 and (day + dt.timedelta(days=7)).month != day.month
+
+
+def lesson_kind(day: dt.date) -> str:
+    weekday = day.weekday()
+
+    if weekday == 0:
+        return "monday"
+    if weekday == 1:
+        return "tuesday"
+    if weekday == 2:
+        return "monthly_mibi" if is_last_wednesday(day) else "weekly_mibi"
+    if weekday == 3:
+        return "thursday_sporicide"
+    if weekday == 4:
+        return "friday_laundry"
+    if weekday == 5:
+        return "saturday"
+    return "sunday"
+
+
 def choose_lesson(lessons: list[dict], now: dt.datetime) -> dict:
+    kind = lesson_kind(now.date())
+    candidates = [item for item in lessons if item.get("kind") == kind]
+
+    if not candidates:
+        raise RuntimeError(f"No lesson found for kind: {kind}")
+
     start_date = dt.date(2026, 1, 1)
-    day_number = (now.date() - start_date).days
-    return lessons[day_number % len(lessons)]
+    week_number = max(0, (now.date() - start_date).days // 7)
+    return candidates[week_number % len(candidates)]
 
 
 def determine_send_type(now: dt.datetime) -> tuple[bool, str]:
@@ -85,101 +110,53 @@ def determine_send_type(now: dt.datetime) -> tuple[bool, str]:
         return True, "morning"
 
     hours = parse_hours()
-
     if now.hour not in hours:
         return False, "not_due"
 
-    if FREQUENCY == "twice" and len(hours) > 1 and now.hour == hours[1]:
+    if FREQUENCY == "twice" and now.hour == hours[1]:
         return True, "evening"
 
     return True, "morning"
 
 
-def bullet_list(items: list[str]) -> str:
-    return "\n".join(f"• {item}" for item in items)
-
-
 def build_morning_message(lesson: dict, now: dt.datetime) -> str:
-    return f"""🏥🇩🇪 {STUDENT_NAME}s Krankenhausdeutsch B2
+    words = " · ".join(lesson["words"][:3])
+    return f"""🏥 {STUDENT_NAME} | {lesson['theme']}
 📅 {now.strftime('%d.%m.%Y')}
-⏱️ Dauer: 5 Minuten
 
-Situation:
-{lesson['scenario']}
+Situation: {lesson['scenario']}
 
-Thema:
-{lesson['theme']}
+Aufgabe: {lesson['task']}
+🎙 Sprich 60–90 Sekunden.
 
-Sprechfrage:
-{lesson['question']}
-
-Ziel:
-{lesson['goal']}
-
-Struktur:
-{bullet_list(lesson['structure'])}
-
-Wortschatz:
-{bullet_list(lesson['vocabulary'])}
-
-Redemittel:
-{bullet_list(lesson['phrases'])}
-
-Grammatik-Fokus:
-{lesson['grammar']}
-
-Aussprache-Fokus:
-{lesson['pronunciation']}
-
-Aufgabe:
-Nimm eine Telegram-Sprachnachricht auf. Sprich so, als wärst du im Krankenhaus, aber bleibe ruhig und klar.
-
-Mini-Challenge:
-{lesson['challenge']}"""
+Nutze: {words}
+Start: „{lesson['starter']}“
+Fokus: {lesson['focus']}"""
 
 
 def build_evening_message(lesson: dict, now: dt.datetime) -> str:
-    return f"""🌙🏥 {STUDENT_NAME}s Krankenhausdeutsch-Korrektur
-📅 {now.strftime('%d.%m.%Y')}
-⏱️ Dauer: 5–7 Minuten
+    return f"""🌙 Kurzkorrektur | {lesson['theme']}
 
-Situation von heute:
-{lesson['scenario']}
+1. Höre deine Aufnahme.
+2. Verbessere zwei Sätze.
+3. Sprich noch einmal 45–60 Sekunden.
 
-Schritt 1:
-Höre deine Sprachnachricht von heute noch einmal an.
-
-Schritt 2:
-Verbessere 3 Sätze:
-• 1 Satz mit besserer Wortstellung
-• 1 Satz mit genauerer Grammatik
-• 1 Satz mit professionellerem Krankenhausdeutsch
-
-Schritt 3:
-Sprich die Situation noch einmal, aber kürzer und besser: 90 Sekunden.
-
-Pflicht-Wörter:
-{bullet_list(lesson['vocabulary'][:4])}
-
-Pflicht-Redemittel:
-{bullet_list(lesson['phrases'])}
-
-Lehrer-Tipp:
-Im Krankenhaus ist gutes Deutsch nicht nur korrekt. Es muss ruhig, höflich, kurz und eindeutig sein."""
+Ziel: {lesson['goal']}
+Pflichtsatz: „{lesson['starter']}“"""
 
 
 def build_test_message() -> str:
-    return f"""✅ Testnachricht vom Krankenhausdeutsch Coach
+    return f"""✅ Hallo {STUDENT_NAME}
 
-Hallo {STUDENT_NAME}, der Telegram-Bot funktioniert.
-
-Nächster Schritt:
-Starte mit einer kurzen B2-Aufgabe für Krankenhausdeutsch."""
+Der Krankenhausdeutsch-Bot funktioniert.
+Mittwoch: MIBI
+Letzter Mittwoch: Monats-MIBI
+Donnerstag: Sporozid-Reinigung
+Freitag: Wäsche"""
 
 
 def send_telegram(text: str) -> None:
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-
     response = requests.post(
         url,
         json={
@@ -211,11 +188,7 @@ def main() -> int:
     should_send, send_type = determine_send_type(now)
 
     print(f"Local time: {now.isoformat()}")
-    print(f"Timezone: {TIMEZONE}")
-    print(f"Frequency: {FREQUENCY}")
-    print(f"Task hours: {parse_hours()}")
-    print(f"Run type: {RUN_TYPE}")
-    print(f"Force send: {FORCE_SEND}")
+    print(f"Lesson type: {lesson_kind(now.date())}")
     print(f"Decision: should_send={should_send}, send_type={send_type}")
 
     if not should_send:
