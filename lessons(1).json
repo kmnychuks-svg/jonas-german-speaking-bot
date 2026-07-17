@@ -1,0 +1,842 @@
+[
+  {
+    "kind": "monday",
+    "theme": "Reinraum freigeben",
+    "scenario": "Vor Produktionsbeginn sind alle kritischen Werte verfügbar.",
+    "task": "Melde die Werte und entscheide: Freigabe oder Sperrung.",
+    "goal": "Eine Entscheidung kurz begründen.",
+    "words": [
+      "Druckkaskade",
+      "Grenzwert",
+      "Freigabe"
+    ],
+    "starter": "Die Werte liegen …, deshalb …",
+    "focus": "weil/deshalb"
+  },
+  {
+    "kind": "monday",
+    "theme": "Abweichung melden",
+    "scenario": "Die Luftfeuchtigkeit liegt über dem Grenzwert.",
+    "task": "Melde die Abweichung und nenne die erste Maßnahme.",
+    "goal": "Sachlich und ohne Schuldzuweisung sprechen.",
+    "words": [
+      "Abweichung",
+      "Luftfeuchtigkeit",
+      "Sperrung"
+    ],
+    "starter": "Es liegt eine Abweichung vor. Ich schlage vor, …",
+    "focus": "höfliche Empfehlung"
+  },
+  {
+    "kind": "monday",
+    "theme": "Druckalarm im Betrieb",
+    "scenario": "Während der Produktion erscheint ein Druckalarm.",
+    "task": "Gib dem Team drei kurze Anweisungen.",
+    "goal": "In einer Störung ruhig führen.",
+    "words": [
+      "Druckalarm",
+      "Unterbrechung",
+      "Prüfung"
+    ],
+    "starter": "Bitte unterbrechen Sie …",
+    "focus": "Imperativ"
+  },
+  {
+    "kind": "monday",
+    "theme": "Wiederfreigabe",
+    "scenario": "Eine technische Störung wurde behoben.",
+    "task": "Erkläre, welche Prüfungen vor der Wiederfreigabe nötig sind.",
+    "goal": "Die Freigabe nachvollziehbar absichern.",
+    "words": [
+      "Wiederfreigabe",
+      "Funktionsprüfung",
+      "Dokumentation"
+    ],
+    "starter": "Vor der Wiederfreigabe müssen wir …",
+    "focus": "müssen"
+  },
+  {
+    "kind": "monday",
+    "theme": "Schichtübergabe",
+    "scenario": "Du übergibst den Reinraum an einen Kollegen.",
+    "task": "Nenne Status, Besonderheiten und einen offenen Punkt.",
+    "goal": "Eine Übergabe in klarer Reihenfolge geben.",
+    "words": [
+      "Status",
+      "offener Punkt",
+      "Nachkontrolle"
+    ],
+    "starter": "Der aktuelle Status ist …",
+    "focus": "Vergangenheit"
+  },
+  {
+    "kind": "monday",
+    "theme": "Technik anrufen",
+    "scenario": "Ein Sensor zeigt wiederholt einen Fehler.",
+    "task": "Melde Gerät, Fehler, Zeitpunkt und Dringlichkeit.",
+    "goal": "Technische Informationen präzise geben.",
+    "words": [
+      "Sensor",
+      "Fehlermeldung",
+      "Dringlichkeit"
+    ],
+    "starter": "Ich melde eine Störung bei …",
+    "focus": "seit + Präsens"
+  },
+  {
+    "kind": "monday",
+    "theme": "Prioritäten setzen",
+    "scenario": "Alarmprüfung, Lieferung und Telefonat kommen gleichzeitig.",
+    "task": "Erkläre deine Reihenfolge und begründe sie.",
+    "goal": "Risiken vor Zeitdruck priorisieren.",
+    "words": [
+      "Priorität",
+      "Auswirkung",
+      "Delegation"
+    ],
+    "starter": "Zuerst …, weil …",
+    "focus": "Reihenfolge"
+  },
+  {
+    "kind": "monday",
+    "theme": "Betriebsbericht",
+    "scenario": "Die Leitung fragt nach dem aktuellen Reinraumstatus.",
+    "task": "Gib einen Bericht in genau vier Sätzen.",
+    "goal": "Kurz und managementtauglich berichten.",
+    "words": [
+      "Betriebsstatus",
+      "Risiko",
+      "Maßnahme"
+    ],
+    "starter": "Der Reinraum ist derzeit …",
+    "focus": "Berichtssprache"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "Materialbedarf planen",
+    "scenario": "Der Bestand reicht nur noch wenige Tage.",
+    "task": "Nenne Bedarf, Restbestand und Bestellmaßnahme.",
+    "goal": "Beschaffung vorausschauend erklären.",
+    "words": [
+      "Restbestand",
+      "Lieferzeit",
+      "Bestellung"
+    ],
+    "starter": "Der Bestand reicht bis …",
+    "focus": "Zeitangaben"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "SAP-Bestellung prüfen",
+    "scenario": "Eine Bestellung ist vor dem Absenden zu kontrollieren.",
+    "task": "Nenne drei Prüfpunkte.",
+    "goal": "Digitale Bestellungen fehlerfrei beschreiben.",
+    "words": [
+      "Artikelnummer",
+      "Bestellmenge",
+      "Lieferant"
+    ],
+    "starter": "Vor dem Absenden prüfe ich …",
+    "focus": "trennbare Verben"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "Lieferengpass",
+    "scenario": "Ein wichtiges Material ist nicht lieferbar.",
+    "task": "Melde das Risiko und schlage eine Übergangslösung vor.",
+    "goal": "Lösungsorientiert kommunizieren.",
+    "words": [
+      "Lieferengpass",
+      "Ersatzlösung",
+      "Priorisierung"
+    ],
+    "starter": "Als Übergangslösung könnten wir …",
+    "focus": "Konjunktiv II"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "Wartung koordinieren",
+    "scenario": "Eine Sicherheitswerkbank muss gewartet werden.",
+    "task": "Stimme Termin, Ausfallzeit und Ersatzplan ab.",
+    "goal": "Wartung mit der Produktion koordinieren.",
+    "words": [
+      "Wartung",
+      "Ausfallzeit",
+      "Ersatzplan"
+    ],
+    "starter": "Als Zeitfenster schlage ich … vor.",
+    "focus": "Terminvorschlag"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "Servicebericht prüfen",
+    "scenario": "Nach einer Wartung liegt der Servicebericht vor.",
+    "task": "Nenne drei Angaben, die du kontrollierst.",
+    "goal": "Technische Dokumente sicher prüfen.",
+    "words": [
+      "Messwert",
+      "Unterschrift",
+      "Folgemaßnahme"
+    ],
+    "starter": "Im Bericht muss … dokumentiert sein.",
+    "focus": "Passiv"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "SOP-Version prüfen",
+    "scenario": "Ein Kollege arbeitet mit einer älteren SOP.",
+    "task": "Sprich ihn an und erkläre das richtige Vorgehen.",
+    "goal": "QM-Abweichungen konstruktiv korrigieren.",
+    "words": [
+      "SOP",
+      "Version",
+      "Freigabe"
+    ],
+    "starter": "Bitte verwenden Sie ausschließlich …",
+    "focus": "höfliche Anweisung"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "Abweichungsbericht",
+    "scenario": "Ein Vorgang wurde nicht vollständig dokumentiert.",
+    "task": "Beschreibe Fakt, Sofortmaßnahme und nächsten Schritt.",
+    "goal": "Neutral dokumentieren.",
+    "words": [
+      "Abweichung",
+      "Sofortmaßnahme",
+      "Ursachenanalyse"
+    ],
+    "starter": "Zum Zeitpunkt des Ereignisses …",
+    "focus": "sachlicher Stil"
+  },
+  {
+    "kind": "tuesday",
+    "theme": "Fortbildung begründen",
+    "scenario": "Du möchtest eine Fortbildung zum Reinraummonitoring besuchen.",
+    "task": "Erkläre Nutzen für deine Arbeit und die Apotheke.",
+    "goal": "Einen professionellen Antrag formulieren.",
+    "words": [
+      "Fortbildung",
+      "Kompetenz",
+      "Praxisnutzen"
+    ],
+    "starter": "Die Fortbildung ist relevant, weil …",
+    "focus": "Begründung"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "Wöchentliche MIBI vorbereiten",
+    "scenario": "Heute ist die wöchentliche mikrobiologische Kontrolle.",
+    "task": "Nenne Material, Messpunkte und Reihenfolge.",
+    "goal": "Die MIBI strukturiert vorbereiten.",
+    "words": [
+      "Monitoringplan",
+      "Messpunkt",
+      "Nährboden"
+    ],
+    "starter": "Zuerst bereite ich … vor.",
+    "focus": "Reihenfolge"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "Sedimentationsplatten",
+    "scenario": "Die Sedimentationsplatten müssen korrekt aufgestellt werden.",
+    "task": "Erkläre Position, Kennzeichnung und Expositionszeit.",
+    "goal": "Proben eindeutig und korrekt platzieren.",
+    "words": [
+      "Sedimentationsplatte",
+      "Kennzeichnung",
+      "Expositionszeit"
+    ],
+    "starter": "Die Platte wird an … aufgestellt.",
+    "focus": "Passiv"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "Abklatschproben",
+    "scenario": "Heute werden definierte Oberflächen beprobt.",
+    "task": "Beschreibe eine korrekte Abklatschprobe.",
+    "goal": "Fehler bei der Probenahme vermeiden.",
+    "words": [
+      "Abklatschprobe",
+      "Kontaktfläche",
+      "Probenort"
+    ],
+    "starter": "Die Kontaktfläche darf nicht …",
+    "focus": "dürfen"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "Luftkeimsammlung",
+    "scenario": "Eine aktive Luftkeimsammlung ist vorgesehen.",
+    "task": "Nenne Gerät, Probenvolumen und Dokumentation.",
+    "goal": "Messdaten vollständig nennen.",
+    "words": [
+      "Luftkeimsammler",
+      "Probenvolumen",
+      "Laufzeit"
+    ],
+    "starter": "Das Probenvolumen beträgt …",
+    "focus": "Zahlen und Einheiten"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "Proben bebrüten",
+    "scenario": "Die MIBI-Proben müssen nach SOP bebrütet werden.",
+    "task": "Erkläre Temperatur, Dauer und Kennzeichnung.",
+    "goal": "SOP-Vorgaben klar wiedergeben.",
+    "words": [
+      "Bebrütung",
+      "Solltemperatur",
+      "Inkubationsdauer"
+    ],
+    "starter": "Die Bebrütung erfolgt gemäß …",
+    "focus": "gemäß + Dativ"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "MIBI dokumentieren",
+    "scenario": "Alle Proben sind genommen.",
+    "task": "Nenne die wichtigsten Angaben für die Dokumentation.",
+    "goal": "Rückverfolgbarkeit sichern.",
+    "words": [
+      "Proben-ID",
+      "Zeitpunkt",
+      "Probennehmer"
+    ],
+    "starter": "Dokumentiert werden …",
+    "focus": "Passiv"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "Auffälliger Befund",
+    "scenario": "Eine Probe zeigt ein auffälliges Ergebnis.",
+    "task": "Melde den Befund vorsichtig und nenne den nächsten Schritt.",
+    "goal": "Keine voreiligen Schlüsse ziehen.",
+    "words": [
+      "Befund",
+      "Nachuntersuchung",
+      "Bewertung"
+    ],
+    "starter": "Das Ergebnis ist auffällig, aber …",
+    "focus": "vorsichtige Sprache"
+  },
+  {
+    "kind": "weekly_mibi",
+    "theme": "MIBI-Trend",
+    "scenario": "Mehrere Wochenwerte sollen verglichen werden.",
+    "task": "Erkläre, was ein Trend zeigen kann.",
+    "goal": "Einzelwerte und Entwicklung unterscheiden.",
+    "words": [
+      "Trend",
+      "Datenreihe",
+      "Frühwarnung"
+    ],
+    "starter": "Nicht nur der Einzelwert, sondern auch …",
+    "focus": "nicht nur … sondern auch"
+  },
+  {
+    "kind": "monthly_mibi",
+    "theme": "Monatliche MIBI planen",
+    "scenario": "Heute ist die umfangreiche monatliche MIBI.",
+    "task": "Nenne Zusatzmessungen, Zeitplan und Verantwortlichkeiten.",
+    "goal": "Die Monatskontrolle vollständig organisieren.",
+    "words": [
+      "Monatsmonitoring",
+      "Zusatzmessung",
+      "Verantwortlichkeit"
+    ],
+    "starter": "Zusätzlich zur Wochenkontrolle …",
+    "focus": "zusätzlich zu"
+  },
+  {
+    "kind": "monthly_mibi",
+    "theme": "Monatliche MIBI durchführen",
+    "scenario": "Der vollständige Monitoringplan wird abgearbeitet.",
+    "task": "Erkläre kurz: Luft, Oberflächen, Partikel und Dokumentation.",
+    "goal": "Die vier Prüfbereiche sicher zusammenfassen.",
+    "words": [
+      "Luftkeim",
+      "Oberflächenprobe",
+      "Partikelzählung"
+    ],
+    "starter": "Heute prüfen wir sowohl … als auch …",
+    "focus": "sowohl … als auch"
+  },
+  {
+    "kind": "monthly_mibi",
+    "theme": "Monatliche MIBI auswerten",
+    "scenario": "Die Monatsdaten liegen vollständig vor.",
+    "task": "Vergleiche Sollwerte, Abweichungen und Trends.",
+    "goal": "Monatsdaten managementtauglich bewerten.",
+    "words": [
+      "Sollwert",
+      "Abweichung",
+      "Monatstrend"
+    ],
+    "starter": "Im Vergleich zum Vormonat …",
+    "focus": "Vergleich"
+  },
+  {
+    "kind": "monthly_mibi",
+    "theme": "Monatliche MIBI berichten",
+    "scenario": "Die Apothekenleitung braucht einen Kurzbericht.",
+    "task": "Gib Status, Auffälligkeit und Maßnahme in drei Sätzen.",
+    "goal": "Einen knappen Monatsbericht geben.",
+    "words": [
+      "Monatsbericht",
+      "Auffälligkeit",
+      "Maßnahme"
+    ],
+    "starter": "Im Berichtsmonat …",
+    "focus": "Berichtssprache"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Sporozid-Reinigung vorbereiten",
+    "scenario": "Heute ist die planmäßige Sporozid-Reinigung.",
+    "task": "Nenne Mittel, Schutzkleidung und Arbeitsreihenfolge.",
+    "goal": "Die Reinigung sicher vorbereiten.",
+    "words": [
+      "Sporozid",
+      "Schutzkleidung",
+      "Reihenfolge"
+    ],
+    "starter": "Vor Beginn kontrolliere ich …",
+    "focus": "vor + Dativ"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Einwirkzeit beachten",
+    "scenario": "Das sporozide Mittel wurde aufgetragen.",
+    "task": "Erkläre Einwirkzeit und warum sie eingehalten werden muss.",
+    "goal": "Einen kritischen Reinigungsschritt begründen.",
+    "words": [
+      "Einwirkzeit",
+      "Oberfläche",
+      "Wirksamkeit"
+    ],
+    "starter": "Die Einwirkzeit muss …",
+    "focus": "müssen"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Reinigungsfolge",
+    "scenario": "Mehrere Flächen müssen sporozid gereinigt werden.",
+    "task": "Erkläre die Reihenfolge von sauber nach weniger sauber.",
+    "goal": "Kontaminationsverschleppung vermeiden.",
+    "words": [
+      "Reinigungsrichtung",
+      "Fläche",
+      "Kontamination"
+    ],
+    "starter": "Wir beginnen bei … und arbeiten weiter zu …",
+    "focus": "Ortsangaben"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Sporozid korrekt anwenden",
+    "scenario": "Ein Kollege ist unsicher bei der Anwendung.",
+    "task": "Gib drei klare Sicherheitsanweisungen.",
+    "goal": "Kurze und eindeutige Anweisungen geben.",
+    "words": [
+      "Dosierung",
+      "Einwirkzeit",
+      "Sicherheitsdatenblatt"
+    ],
+    "starter": "Bitte beachten Sie …",
+    "focus": "Imperativ"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Reinigung dokumentieren",
+    "scenario": "Die Sporozid-Reinigung ist abgeschlossen.",
+    "task": "Nenne Datum, Bereich, Mittel und Unterschrift.",
+    "goal": "Die Durchführung lückenlos dokumentieren.",
+    "words": [
+      "Reinigungsnachweis",
+      "Bereich",
+      "Unterschrift"
+    ],
+    "starter": "Im Nachweis dokumentiere ich …",
+    "focus": "Aufzählung"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Qualitätsmangel",
+    "scenario": "Nach der Reinigung sind Rückstände sichtbar.",
+    "task": "Reklamiere den Mangel und fordere Nachbesserung.",
+    "goal": "Bestimmt, aber sachlich reklamieren.",
+    "words": [
+      "Rückstand",
+      "Nachbesserung",
+      "Frist"
+    ],
+    "starter": "Die Leistung ist noch nicht vollständig …",
+    "focus": "noch nicht"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Freigabe nach Reinigung",
+    "scenario": "Die Sporozid-Reinigung ist beendet.",
+    "task": "Erkläre, welche Kontrollen vor der Nutzung folgen.",
+    "goal": "Reinigung und Betriebsfreigabe verbinden.",
+    "words": [
+      "Sichtkontrolle",
+      "Trocknung",
+      "Freigabe"
+    ],
+    "starter": "Vor der Nutzung muss …",
+    "focus": "bevor/vor"
+  },
+  {
+    "kind": "thursday_sporicide",
+    "theme": "Sporozid-Schulung",
+    "scenario": "Ein neuer Kollege soll die Sporozid-Reinigung kennenlernen.",
+    "task": "Erkläre Zweck, Risiko und einen typischen Fehler.",
+    "goal": "Praxisnah schulen.",
+    "words": [
+      "Sporen",
+      "Wirksamkeit",
+      "Anwendungsfehler"
+    ],
+    "starter": "Ein typischer Fehler ist …",
+    "focus": "Beispielsprache"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Reinraumwäsche sammeln",
+    "scenario": "Heute wird die Reinraumwäsche für die Wäscherei vorbereitet.",
+    "task": "Erkläre Sammlung, Trennung und Kennzeichnung.",
+    "goal": "Wäsche hygienisch bereitstellen.",
+    "words": [
+      "Reinraumwäsche",
+      "Trennung",
+      "Kennzeichnung"
+    ],
+    "starter": "Die Wäsche wird getrennt nach …",
+    "focus": "Passiv"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Wäschebestand prüfen",
+    "scenario": "Vor der Abholung wird der Bestand gezählt.",
+    "task": "Nenne Sollbestand, Istbestand und Differenz.",
+    "goal": "Bestandsabweichungen klar melden.",
+    "words": [
+      "Sollbestand",
+      "Istbestand",
+      "Differenz"
+    ],
+    "starter": "Der Istbestand weicht um … ab.",
+    "focus": "Zahlen"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Wäsche an Dienstleister übergeben",
+    "scenario": "Die Wäscherei holt die Reinraumkleidung ab.",
+    "task": "Nenne Menge, Übergabezeit und Nachweis.",
+    "goal": "Eine sichere Übergabe dokumentieren.",
+    "words": [
+      "Abholung",
+      "Übergabenachweis",
+      "Menge"
+    ],
+    "starter": "Übergeben wurden …",
+    "focus": "Perfekt/Passiv"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Saubere Wäsche prüfen",
+    "scenario": "Frische Reinraumkleidung wurde geliefert.",
+    "task": "Prüfe Verpackung, Sauberkeit und Vollständigkeit.",
+    "goal": "Wareneingang systematisch kontrollieren.",
+    "words": [
+      "Verpackung",
+      "Sauberkeit",
+      "Vollständigkeit"
+    ],
+    "starter": "Bei der Kontrolle ist aufgefallen, dass …",
+    "focus": "dass-Satz"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Beschädigte Kleidung",
+    "scenario": "Mehrere Reinraumanzüge sind beschädigt.",
+    "task": "Melde Art, Anzahl und notwendige Maßnahme.",
+    "goal": "Qualitätsmängel eindeutig beschreiben.",
+    "words": [
+      "Beschädigung",
+      "Aussortierung",
+      "Ersatz"
+    ],
+    "starter": "Die betroffenen Teile werden …",
+    "focus": "Passiv"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Wäscheengpass",
+    "scenario": "Für die nächste Woche fehlt Reinraumkleidung.",
+    "task": "Melde den Engpass und schlage eine Lösung vor.",
+    "goal": "Versorgung rechtzeitig absichern.",
+    "words": [
+      "Engpass",
+      "Reservebestand",
+      "Nachbestellung"
+    ],
+    "starter": "Der Reservebestand reicht nur bis …",
+    "focus": "Prognose"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Wäschedokumentation",
+    "scenario": "Die Wäschebewegungen der Woche müssen abgeschlossen werden.",
+    "task": "Nenne Abgang, Zugang, Differenz und offenen Punkt.",
+    "goal": "Bestände nachvollziehbar dokumentieren.",
+    "words": [
+      "Abgang",
+      "Zugang",
+      "Bestandskorrektur"
+    ],
+    "starter": "Diese Woche wurden …",
+    "focus": "Vergangenheit"
+  },
+  {
+    "kind": "friday_laundry",
+    "theme": "Wäscheprozess verbessern",
+    "scenario": "Bei der Übergabe entstehen regelmäßig Verzögerungen.",
+    "task": "Schlage eine kleine Prozessverbesserung vor.",
+    "goal": "Praktische Verbesserungen klar präsentieren.",
+    "words": [
+      "Übergabezeit",
+      "Checkliste",
+      "Zeitersparnis"
+    ],
+    "starter": "Ich schlage vor, …",
+    "focus": "um … zu"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Rolle erklären",
+    "scenario": "Ein neuer Kollege fragt nach deiner Funktion.",
+    "task": "Erkläre Aufgaben, Verantwortung und Grenzen.",
+    "goal": "Die Rolle des Reinraummanagers korrekt darstellen.",
+    "words": [
+      "Reinraummanager",
+      "Verantwortung",
+      "Aufsicht"
+    ],
+    "starter": "Meine zentrale Aufgabe ist …",
+    "focus": "Rollenbeschreibung"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Pharmazeutische Grenze",
+    "scenario": "Du wirst um eine pharmazeutische Herstellungstätigkeit gebeten.",
+    "task": "Lehne höflich ab und biete eine zulässige Hilfe an.",
+    "goal": "Kompetenzgrenzen sicher kommunizieren.",
+    "words": [
+      "Zuständigkeit",
+      "Qualifikation",
+      "Unterstützung"
+    ],
+    "starter": "Diese Tätigkeit darf ich nicht …",
+    "focus": "dürfen"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Zureicher",
+    "scenario": "Du unterstützt den Herstellenden an der Werkbank.",
+    "task": "Beschreibe deine Aufgaben in drei Sätzen.",
+    "goal": "Aseptische Assistenz korrekt erklären.",
+    "words": [
+      "Zureicher",
+      "aseptisch",
+      "Materialschleuse"
+    ],
+    "starter": "Ich reiche … zu und übernehme …",
+    "focus": "und-Sätze"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Vorbereiter",
+    "scenario": "Du bereitest die Tagesproduktion vor.",
+    "task": "Nenne Auftrag, Material und Etiketten.",
+    "goal": "Vorbereitung und Herstellung unterscheiden.",
+    "words": [
+      "Herstellungsauftrag",
+      "Ausgangsstoff",
+      "Etikett"
+    ],
+    "starter": "Ich bereite vor; hergestellt wird durch …",
+    "focus": "Aktiv/Passiv"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Teamkonflikt",
+    "scenario": "Ein Kollege widerspricht einer Sperrentscheidung.",
+    "task": "Reagiere ruhig und verweise auf Messwerte.",
+    "goal": "Faktenbasiert deeskalieren.",
+    "words": [
+      "Einwand",
+      "Messwert",
+      "Risikobewertung"
+    ],
+    "starter": "Ich verstehe den Einwand, jedoch …",
+    "focus": "jedoch"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Kurze Besprechung",
+    "scenario": "Du leitest eine fünfminütige Teambesprechung.",
+    "task": "Nenne Ziel, zwei Punkte und Abschluss.",
+    "goal": "Besprechungen kurz moderieren.",
+    "words": [
+      "Tagesordnung",
+      "Zuständigkeit",
+      "Frist"
+    ],
+    "starter": "Heute klären wir …",
+    "focus": "Moderation"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Auditantwort",
+    "scenario": "Ein Auditor fragt nach deiner täglichen Kontrolle.",
+    "task": "Antworte in maximal vier Sätzen.",
+    "goal": "Präzise und dokumentenbezogen antworten.",
+    "words": [
+      "Audit",
+      "Nachweis",
+      "Rückverfolgbarkeit"
+    ],
+    "starter": "Die Prüfung erfolgt …",
+    "focus": "Präsens"
+  },
+  {
+    "kind": "saturday",
+    "theme": "Verbesserungsidee",
+    "scenario": "Du willst einen Arbeitsablauf verbessern.",
+    "task": "Nenne Problem, Lösung und messbaren Nutzen.",
+    "goal": "Verbesserungen überzeugend vorstellen.",
+    "words": [
+      "Verbesserung",
+      "Risiko",
+      "Zeitersparnis"
+    ],
+    "starter": "Ich schlage vor, …",
+    "focus": "um … zu"
+  },
+  {
+    "kind": "sunday",
+    "theme": "Wochenrückblick Betrieb",
+    "scenario": "Die Woche ist beendet.",
+    "task": "Nenne eine gute Entscheidung und einen Lernpunkt.",
+    "goal": "Berufliche Erfahrungen reflektieren.",
+    "words": [
+      "Entscheidung",
+      "Erfahrung",
+      "Lernpunkt"
+    ],
+    "starter": "Diese Woche war wichtig, dass …",
+    "focus": "Vergangenheit"
+  },
+  {
+    "kind": "sunday",
+    "theme": "Wochenrückblick MIBI",
+    "scenario": "Denke an die letzte MIBI.",
+    "task": "Nenne einen sicheren Schritt und eine mögliche Fehlerquelle.",
+    "goal": "Monitoringwissen festigen.",
+    "words": [
+      "Probenahme",
+      "Fehlerquelle",
+      "Dokumentation"
+    ],
+    "starter": "Besonders wichtig war …",
+    "focus": "Rückblick"
+  },
+  {
+    "kind": "sunday",
+    "theme": "Wochenrückblick Reinigung",
+    "scenario": "Denke an die Sporozid-Reinigung.",
+    "task": "Erkläre Zweck und kritischen Schritt.",
+    "goal": "Reinigungswissen festigen.",
+    "words": [
+      "Sporozid",
+      "Einwirkzeit",
+      "Wirksamkeit"
+    ],
+    "starter": "Die Reinigung ist wirksam, wenn …",
+    "focus": "wenn-Satz"
+  },
+  {
+    "kind": "sunday",
+    "theme": "Wochenrückblick Wäsche",
+    "scenario": "Denke an den Wäscheprozess.",
+    "task": "Nenne eine Kontrolle und eine Verbesserung.",
+    "goal": "Versorgungsprozesse reflektieren.",
+    "words": [
+      "Bestand",
+      "Übergabe",
+      "Verbesserung"
+    ],
+    "starter": "Beim nächsten Mal werde ich …",
+    "focus": "Zukunft"
+  },
+  {
+    "kind": "sunday",
+    "theme": "Wortschatztest",
+    "scenario": "Du wiederholst die wichtigsten Wörter der Woche.",
+    "task": "Bilde mit fünf Fachwörtern je einen Satz.",
+    "goal": "Aktiven Fachwortschatz aufbauen.",
+    "words": [
+      "Grenzwert",
+      "Abweichung",
+      "Monitoring"
+    ],
+    "starter": "Ein Beispiel aus meiner Arbeit ist …",
+    "focus": "Satzbau"
+  },
+  {
+    "kind": "sunday",
+    "theme": "90-Sekunden-Bericht",
+    "scenario": "Du berichtest über deine Arbeitswoche.",
+    "task": "Sprich 90 Sekunden: Status, Problem, Maßnahme, Ergebnis.",
+    "goal": "Flüssig und strukturiert berichten.",
+    "words": [
+      "Status",
+      "Maßnahme",
+      "Ergebnis"
+    ],
+    "starter": "Zuerst … Danach … Abschließend …",
+    "focus": "Struktur"
+  },
+  {
+    "kind": "sunday",
+    "theme": "Selbstkorrektur",
+    "scenario": "Du wählst eine alte Sprachnachricht aus.",
+    "task": "Verbessere Aussprache, Wortstellung und Fachsprache.",
+    "goal": "Eigene Fehler systematisch erkennen.",
+    "words": [
+      "Aussprache",
+      "Wortstellung",
+      "Fachsprache"
+    ],
+    "starter": "Besser wäre der Satz …",
+    "focus": "Korrektursprache"
+  },
+  {
+    "kind": "sunday",
+    "theme": "Monatsfortschritt",
+    "scenario": "Du bewertest deinen aktuellen Lernstand.",
+    "task": "Nenne eine Stärke, eine Schwierigkeit und ein Ziel.",
+    "goal": "Lernen gezielt steuern.",
+    "words": [
+      "Stärke",
+      "Schwierigkeit",
+      "Lernziel"
+    ],
+    "starter": "Mein nächstes Ziel ist …",
+    "focus": "Zielsetzung"
+  }
+]
