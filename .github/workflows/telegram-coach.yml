@@ -1,0 +1,38 @@
+name: Jonas Krankenhausdeutsch
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      run_type:
+        description: "auto, morning, evening or test"
+        required: false
+        default: "test"
+
+jobs:
+  send-lesson:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Send Telegram lesson
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          STUDENT_NAME: ${{ vars.STUDENT_NAME || 'Jonas' }}
+          TIMEZONE: ${{ vars.TIMEZONE || 'Europe/Berlin' }}
+          FREQUENCY: ${{ vars.FREQUENCY || 'twice' }}
+          TASK_HOURS: ${{ vars.TASK_HOURS || '8,18' }}
+          RUN_TYPE: ${{ github.event.inputs.run_type || 'auto' }}
+          FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' }}
+        run: python telegram_coach.py
